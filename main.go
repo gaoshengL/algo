@@ -1,8 +1,8 @@
 package main
 
-import "fmt"
+import "algo/sort"
 
 func main() {
-	fmt.Println("nihaoqqq")
+	sort.Insertion_sort([]int{4, 3, 2, 1})
 
 }
