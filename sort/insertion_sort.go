@@ -2,7 +2,11 @@ package sort
 
 import "fmt"
 
-func Insertion_sort(source []int) {
+/*
+增量排序
+*/
+
+func InsertionSort(source []int) {
 	for j := 1; j < len(source); j++ {
 		key := source[j]
 		i := j - 1
