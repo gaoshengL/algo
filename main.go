@@ -3,6 +3,6 @@ package main
 import "algo/sort"
 
 func main() {
-	sort.ShellsSort([]int{4, 3, 9, 1, 8})
+	sort.MergeSortTop([]int{3, 1, 5, 2})
 
 }
