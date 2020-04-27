@@ -9,8 +9,9 @@ import "fmt"
 func MergeSortBottom(source []int) {
 
 	//merge(&source,0,len(source)/2-1,len(source)-1)
+	count := 0
 	mergesort(&source, 0, len(source)-1)
-	fmt.Println(source)
+	fmt.Println(count)
 
 }
 
@@ -58,8 +59,11 @@ func merge(source *[]int, lo int, mid int, hi int) {
 			} else {
 				if rs[i] < rs[j] {
 					(*source)[k] = rs[i]
+					//*count=*count+1
+					//fmt.Println(*count)
 					i++
 				} else {
+
 					(*source)[k] = rs[j]
 					j++
 				}
