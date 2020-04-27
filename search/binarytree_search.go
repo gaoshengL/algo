@@ -64,3 +64,26 @@ func postorderTraver(node *TreeNode, n *[]int) {
 	postorderTraver(node.Right, n)
 	*n = append(*n, node.Val)
 }
+
+/*
+层序遍历
+*/
+func levelOrder(root *TreeNode) [][]int {
+	n := [][]int{}
+	i := 0
+	levelorderTraver(root, &n, i)
+	return n
+}
+
+func levelorderTraver(node *TreeNode, n *[][]int, i int) {
+	if node == nil {
+		return
+	}
+	if len(*n) < i+1 {
+		(*n) = append((*n), []int{})
+	}
+	(*n)[i] = append((*n)[i], node.Val)
+	i = i + 1
+	levelorderTraver(node.Left, n, i)
+	levelorderTraver(node.Right, n, i)
+}
